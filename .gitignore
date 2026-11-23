@@ -3,4 +3,4 @@ npm-debug.log*
 *.tmp
 data/*.tmp
 .env
-PRD
+PRD.md

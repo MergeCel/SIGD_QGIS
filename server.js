@@ -127,6 +127,18 @@ function validateKawasanFeature(feature) {
   return null;
 }
 
+/**
+ * FID berikutnya, mengikuti konvensi hasil ekspor QGIS (properties.fid unik).
+ */
+function nextFid(features) {
+  const maxFid = features.reduce((max, item) => {
+    const fid = Number(item?.properties?.fid);
+    return Number.isFinite(fid) && fid > max ? fid : max;
+  }, 0);
+
+  return maxFid + 1;
+}
+
 /* --------------------------------- Route -------------------------------- */
 
 // GET /api/data/hotel -> isi hotel_south.geojson (GeoJSON mentah untuk Leaflet)
@@ -191,7 +203,14 @@ app.post('/api/feature/kawasan', async (req, res, next) => {
       geojson.features = [];
     }
 
-    geojson.features.push(feature);
+    // Samakan dengan hasil ekspor QGIS: setiap feature punya properties.fid unik.
+    const properties =
+      feature.properties && typeof feature.properties === 'object' && !Array.isArray(feature.properties)
+        ? { ...feature.properties }
+        : {};
+    properties.fid = nextFid(geojson.features);
+
+    geojson.features.push({ ...feature, properties });
     await writeGeoJson(LAYERS.kawasan, geojson);
 
     // Format disepakati: 201 + { ok, total }.
