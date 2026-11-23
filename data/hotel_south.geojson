@@ -1,0 +1,498 @@
+{
+  "type": "FeatureCollection",
+  "name": "hotel_south",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Khatulistiwa Grand Hotel",
+        "bintang": 5,
+        "latitude": -0.053096,
+        "longitude": 109.327119,
+        "harga_malam": 1390000,
+        "fasilitas": "Ruang Rapat | Gym | Kolam Renang | Parkir | Antar-Jemput | Sarapan | WiFi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.327119,
+          -0.053096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Kapuas Palace Hotel",
+        "bintang": 5,
+        "latitude": -0.050871,
+        "longitude": 109.336447,
+        "harga_malam": 1315000,
+        "fasilitas": "Ruang Rapat | Restoran | Parkir | WiFi | Sarapan | AC | Gym"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.336447,
+          -0.050871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Borneo Premier Hotel",
+        "bintang": 5,
+        "latitude": -0.039474,
+        "longitude": 109.334662,
+        "harga_malam": 1240000,
+        "fasilitas": "Ruang Rapat | Gym | Parkir | Kolam Renang | Restoran | Antar-Jemput | WiFi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.334662,
+          -0.039474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Equator Suites Pontianak",
+        "bintang": 4,
+        "latitude": -0.059488,
+        "longitude": 109.337881,
+        "harga_malam": 695000,
+        "fasilitas": "Sarapan | Kolam Renang | AC | Restoran | Antar-Jemput | Ruang Rapat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.337881,
+          -0.059488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Teratai Boutique Hotel",
+        "bintang": 4,
+        "latitude": -0.069871,
+        "longitude": 109.309465,
+        "harga_malam": 585000,
+        "fasilitas": "WiFi | Antar-Jemput | Kolam Renang | Sarapan | Ruang Rapat | Gym"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.309465,
+          -0.069871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hotel Dara Juanti",
+        "bintang": 4,
+        "latitude": -0.052692,
+        "longitude": 109.325449,
+        "harga_malam": 655000,
+        "fasilitas": "Parkir | AC | WiFi | Restoran | Ruang Rapat | Sarapan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.325449,
+          -0.052692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Mahkota Inn",
+        "bintang": 4,
+        "latitude": -0.040726,
+        "longitude": 109.353334,
+        "harga_malam": 610000,
+        "fasilitas": "Restoran | Gym | AC | WiFi | Sarapan | Parkir"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.353334,
+          -0.040726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hotel Sungai Raya Asri",
+        "bintang": 4,
+        "latitude": -0.057647,
+        "longitude": 109.327762,
+        "harga_malam": 845000,
+        "fasilitas": "Gym | Ruang Rapat | Parkir | Kolam Renang | AC | Antar-Jemput"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.327762,
+          -0.057647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Ayani Residence",
+        "bintang": 3,
+        "latitude": -0.07474,
+        "longitude": 109.325498,
+        "harga_malam": 420000,
+        "fasilitas": "Parkir | WiFi | Kolam Renang | Sarapan | Gym"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.325498,
+          -0.07474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hotel Tanjungpura Indah",
+        "bintang": 3,
+        "latitude": -0.060473,
+        "longitude": 109.31144,
+        "harga_malam": 355000,
+        "fasilitas": "AC | Parkir | Gym | WiFi | Antar-Jemput"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.31144,
+          -0.060473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Cempaka Hotel",
+        "bintang": 3,
+        "latitude": -0.059745,
+        "longitude": 109.322985,
+        "harga_malam": 505000,
+        "fasilitas": "Ruang Rapat | Restoran | Sarapan | Gym | Kolam Renang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.322985,
+          -0.059745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hotel Putri Kapuas",
+        "bintang": 3,
+        "latitude": -0.05346,
+        "longitude": 109.336166,
+        "harga_malam": 530000,
+        "fasilitas": "Sarapan | Ruang Rapat | Parkir | WiFi | Gym"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.336166,
+          -0.05346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Melati Pontianak Hotel",
+        "bintang": 3,
+        "latitude": -0.055573,
+        "longitude": 109.329097,
+        "harga_malam": 540000,
+        "fasilitas": "Kolam Renang | Restoran | Antar-Jemput | Gym | Parkir"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.329097,
+          -0.055573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hotel Bumi Khatulistiwa",
+        "bintang": 3,
+        "latitude": -0.049596,
+        "longitude": 109.337423,
+        "harga_malam": 370000,
+        "fasilitas": "Parkir | Gym | Kolam Renang | AC | WiFi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.337423,
+          -0.049596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Mawar Guest House",
+        "bintang": 3,
+        "latitude": -0.062352,
+        "longitude": 109.307485,
+        "harga_malam": 415000,
+        "fasilitas": "WiFi | Antar-Jemput | Kolam Renang | Restoran | AC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.307485,
+          -0.062352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hotel Nusantara Selatan",
+        "bintang": 2,
+        "latitude": -0.067372,
+        "longitude": 109.327014,
+        "harga_malam": 335000,
+        "fasilitas": "Restoran | WiFi | Ruang Rapat | Gym"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.327014,
+          -0.067372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Anggrek Inn",
+        "bintang": 2,
+        "latitude": -0.044286,
+        "longitude": 109.350575,
+        "harga_malam": 210000,
+        "fasilitas": "WiFi | Kolam Renang | Gym | Antar-Jemput"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.350575,
+          -0.044286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Kenanga Homestay",
+        "bintang": 2,
+        "latitude": -0.042038,
+        "longitude": 109.33192,
+        "harga_malam": 235000,
+        "fasilitas": "AC | Antar-Jemput | WiFi | Ruang Rapat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.33192,
+          -0.042038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Hotel Sinar Kapuas",
+        "bintang": 2,
+        "latitude": -0.071974,
+        "longitude": 109.309863,
+        "harga_malam": 310000,
+        "fasilitas": "AC | Sarapan | Antar-Jemput | Ruang Rapat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.309863,
+          -0.071974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Wisma Cendana",
+        "bintang": 2,
+        "latitude": -0.060536,
+        "longitude": 109.333706,
+        "harga_malam": 340000,
+        "fasilitas": "Kolam Renang | WiFi | Restoran | Parkir"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.333706,
+          -0.060536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Wisma Bahari",
+        "bintang": 2,
+        "latitude": -0.046834,
+        "longitude": 109.343901,
+        "harga_malam": 325000,
+        "fasilitas": "Parkir | WiFi | Restoran | Sarapan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.343901,
+          -0.046834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Penginapan Flamboyan",
+        "bintang": 2,
+        "latitude": -0.040992,
+        "longitude": 109.330501,
+        "harga_malam": 290000,
+        "fasilitas": "Ruang Rapat | Antar-Jemput | Kolam Renang | Restoran"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.330501,
+          -0.040992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Penginapan Seruni",
+        "bintang": 1,
+        "latitude": -0.072386,
+        "longitude": 109.324679,
+        "harga_malam": 175000,
+        "fasilitas": "Gym | Antar-Jemput | Ruang Rapat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.324679,
+          -0.072386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Losmen Harapan Jaya",
+        "bintang": 1,
+        "latitude": -0.079626,
+        "longitude": 109.314695,
+        "harga_malam": 165000,
+        "fasilitas": "WiFi | Kolam Renang | Restoran"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.314695,
+          -0.079626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Wisma Kemuning",
+        "bintang": 1,
+        "latitude": -0.046085,
+        "longitude": 109.330582,
+        "harga_malam": 180000,
+        "fasilitas": "AC | Kolam Renang | Sarapan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.330582,
+          -0.046085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Penginapan Dahlia",
+        "bintang": 1,
+        "latitude": -0.059643,
+        "longitude": 109.310903,
+        "harga_malam": 125000,
+        "fasilitas": "Parkir | Gym | Sarapan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.310903,
+          -0.059643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Losmen Pelangi",
+        "bintang": 1,
+        "latitude": -0.060164,
+        "longitude": 109.336177,
+        "harga_malam": 190000,
+        "fasilitas": "AC | Kolam Renang | Antar-Jemput"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.336177,
+          -0.060164
+        ]
+      }
+    }
+  ]
+}

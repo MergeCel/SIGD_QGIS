@@ -1,0 +1,29 @@
+{
+"type": "FeatureCollection",
+"name": "objek_wisata",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{"type":"Feature","properties":{"name":"Museum Provinsi Kalimantan Barat"},"geometry":{"type":"Point","coordinates":[109.34280025,-0.04847925]}},
+{"type":"Feature","properties":{"name":"Rumah Betang"},"geometry":{"type":"Point","coordinates":[109.341324799999967,-0.0476269]}},
+{"type":"Feature","properties":{"name":"Hotel Orchardz"},"geometry":{"type":"Point","coordinates":[109.343484272383392,-0.037715664207214]}},
+{"type":"Feature","properties":{"name":null},"geometry":{"type":"Point","coordinates":[109.330062547488993,-0.038531993049525]}},
+{"type":"Feature","properties":{"name":"Hotel Nusantara"},"geometry":{"type":"Point","coordinates":[109.341730447476237,-0.038630715928727]}},
+{"type":"Feature","properties":{"name":"Pontianak Hotel Garuda"},"geometry":{"type":"Point","coordinates":[109.347550853109951,-0.039445232767539]}},
+{"type":"Feature","properties":{"name":"Hotel Kapuas"},"geometry":{"type":"Point","coordinates":[109.34798273317314,-0.042704999392283]}},
+{"type":"Feature","properties":{"name":"Hotel Neo"},"geometry":{"type":"Point","coordinates":[109.343110667687952,-0.038501531458067]}},
+{"type":"Feature","properties":{"name":"Hotel Harris"},"geometry":{"type":"Point","coordinates":[109.343594141479016,-0.037976120651549]}},
+{"type":"Feature","properties":{"name":"Galeri Hasil Hutan Provinsi Kalimantan Barat"},"geometry":{"type":"Point","coordinates":[109.343399150437904,-0.045313916737801]}},
+{"type":"Feature","properties":{"name":"Aston Hotel"},"geometry":{"type":"Point","coordinates":[109.3430078,-0.0362527]}},
+{"type":"Feature","properties":{"name":"Transera Hotel"},"geometry":{"type":"Point","coordinates":[109.3444189,-0.0356787]}},
+{"type":"Feature","properties":{"name":"Hotel Star"},"geometry":{"type":"Point","coordinates":[109.342683,-0.039197]}},
+{"type":"Feature","properties":{"name":"Hotel Orient"},"geometry":{"type":"Point","coordinates":[109.3466024,-0.0349006]}},
+{"type":"Feature","properties":{"name":"Dipta Haryono"},"geometry":{"type":"Point","coordinates":[109.318115,-0.0605583]}},
+{"type":"Feature","properties":{"name":"Airy Pontianak Selatan Imam Bonjol 89"},"geometry":{"type":"Point","coordinates":[109.3489849,-0.0419479]}},
+{"type":"Feature","properties":{"name":"Canopy Center Hostel"},"geometry":{"type":"Point","coordinates":[109.3229784,-0.0596796]}},
+{"type":"Feature","properties":{"name":"Ateng House"},"geometry":{"type":"Point","coordinates":[109.3423959,-0.0357011]}},
+{"type":"Feature","properties":{"name":"Cozy kost"},"geometry":{"type":"Point","coordinates":[109.3209238,-0.0560059]}},
+{"type":"Feature","properties":{"name":"Hotel My Home"},"geometry":{"type":"Point","coordinates":[109.3407732,-0.0369297]}},
+{"type":"Feature","properties":{"name":"Colour Hostel"},"geometry":{"type":"Point","coordinates":[109.3451292,-0.0309811]}},
+{"type":"Feature","properties":{"name":"Urbanview Hotel Syariah Dapen Pontianak By RedDoorz"},"geometry":{"type":"Point","coordinates":[109.3462201,-0.044189]}}
+]
+}
