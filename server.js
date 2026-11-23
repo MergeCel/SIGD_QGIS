@@ -201,6 +201,42 @@ app.post('/api/feature/kawasan', async (req, res, next) => {
   }
 });
 
+// DELETE /api/feature/kawasan/:index -> hapus satu Polygon buatan web dari kawasan_hotel.geojson
+app.delete('/api/feature/kawasan/:index', async (req, res, next) => {
+  try {
+    const rawIndex = req.params.index;
+    const index = Number.parseInt(rawIndex, 10);
+
+    if (!Number.isInteger(index) || String(index) !== rawIndex || index < 0) {
+      return res.status(400).json({ ok: false, error: 'Index kawasan tidak valid.' });
+    }
+
+    const geojson = await readGeoJson(LAYERS.kawasan);
+    if (!Array.isArray(geojson.features) || index >= geojson.features.length) {
+      return res.status(404).json({ ok: false, error: 'Poligon kawasan tidak ditemukan.' });
+    }
+
+    const target = geojson.features[index];
+    const isLocked =
+      (target?.properties?.fid !== undefined && target?.properties?.fid !== null) ||
+      Boolean(target?.properties?.locked);
+
+    if (isLocked) {
+      return res.status(403).json({
+        ok: false,
+        error: 'Poligon kawasan bawaan SK-2 terkunci dan tidak dapat dihapus.',
+      });
+    }
+
+    geojson.features.splice(index, 1);
+    await writeGeoJson(LAYERS.kawasan, geojson);
+
+    return res.json({ ok: true, total: geojson.features.length });
+  } catch (error) {
+    return next(error);
+  }
+});
+
 // GET / -> status backend. Jika public/index.html sudah ada (frontend bagian 3),
 // express.static di atas yang akan menyajikannya dan route ini tidak terpakai.
 app.get('/', (req, res) => {

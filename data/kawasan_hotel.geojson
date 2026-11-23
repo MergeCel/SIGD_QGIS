@@ -1,5 +1,123 @@
 {
   "type": "FeatureCollection",
   "name": "kawasan_hotel",
-  "features": []
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "xy_coordinate_resolution": 0.000001,
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 1,
+        "nama_kawasan": "Kawasan Pusat Kota"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.323106,
+              -0.059786
+            ],
+            [
+              109.327762,
+              -0.057647
+            ],
+            [
+              109.329097,
+              -0.055573
+            ],
+            [
+              109.327119,
+              -0.053096
+            ],
+            [
+              109.325267,
+              -0.052856
+            ],
+            [
+              109.323106,
+              -0.059786
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 2,
+        "nama_kawasan": "Kawasan Tepian Kapuas"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.333706,
+              -0.060536
+            ],
+            [
+              109.336177,
+              -0.060164
+            ],
+            [
+              109.337881,
+              -0.059488
+            ],
+            [
+              109.336166,
+              -0.05346
+            ],
+            [
+              109.336447,
+              -0.050871
+            ],
+            [
+              109.333706,
+              -0.060536
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 3,
+        "nama_kawasan": "Kawasan Barat Daya"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.307398,
+              -0.062282
+            ],
+            [
+              109.309863,
+              -0.071974
+            ],
+            [
+              109.31144,
+              -0.060473
+            ],
+            [
+              109.310787,
+              -0.059548
+            ],
+            [
+              109.307398,
+              -0.062282
+            ]
+          ]
+        ]
+      }
+    }
+  ]
 }

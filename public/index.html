@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIG Hotel &amp; Penginapan — Pontianak Selatan (Kelompok 11)</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Leaflet 1.9.4 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+
+  <!-- Leaflet.markercluster 1.5.3 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+    crossorigin=""
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+    crossorigin=""
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Header / Topbar -->
+    <header class="topbar">
+      <div class="topbar-brand">
+        <div class="brand-badge" aria-hidden="true">K11</div>
+        <div>
+          <h1>Sistem Informasi Geografis Hotel &amp; Penginapan — Kecamatan Pontianak Selatan</h1>
+          <p class="subtitle">Dinas Pariwisata Kota Pontianak (Kelompok 11)</p>
+        </div>
+      </div>
+
+      <div class="topbar-status">
+        <span id="api-status" class="status-pill status-loading">Memuat API...</span>
+        <span id="hotel-counter" class="counter-pill">Menampilkan 0 dari 0 Hotel</span>
+      </div>
+    </header>
+
+    <!-- Main Layout: Sidebar + Map -->
+    <main class="main-layout">
+      <aside class="sidebar" aria-label="Panel Kontrol Peta">
+        <!-- 1. Filter Kelas Bintang -->
+        <section class="panel-card">
+          <div class="panel-header">
+            <h2>Filter Kelas Bintang</h2>
+            <div class="quick-actions">
+              <button type="button" id="btn-select-all" class="btn-link">Pilih Semua</button>
+              <span aria-hidden="true">·</span>
+              <button type="button" id="btn-reset-filters" class="btn-link">Reset</button>
+            </div>
+          </div>
+
+          <div class="filter-list">
+            <label class="checkbox-row" for="filter-bintang5">
+              <input type="checkbox" id="filter-bintang5" checked />
+              <span class="checkbox-label">Bintang 5</span>
+              <span class="star-badge star-5">★★★★★</span>
+            </label>
+
+            <label class="checkbox-row" for="filter-bintang4">
+              <input type="checkbox" id="filter-bintang4" checked />
+              <span class="checkbox-label">Bintang 4</span>
+              <span class="star-badge star-4">★★★★</span>
+            </label>
+
+            <label class="checkbox-row" for="filter-bintang3">
+              <input type="checkbox" id="filter-bintang3" checked />
+              <span class="checkbox-label">Bintang 3</span>
+              <span class="star-badge star-3">★★★</span>
+            </label>
+
+            <label class="checkbox-row" for="filter-lainnya">
+              <input type="checkbox" id="filter-lainnya" checked />
+              <span class="checkbox-label">Lainnya (Bintang 1 &amp; 2)</span>
+              <span class="star-badge star-other">★1–2</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- 2. Pengaturan Layer & Clustering -->
+        <section class="panel-card">
+          <div class="panel-header">
+            <h2>Pengaturan Layer &amp; Clustering</h2>
+          </div>
+
+          <div class="filter-list">
+            <label class="toggle-row" for="toggle-cluster">
+              <input type="checkbox" id="toggle-cluster" />
+              <div>
+                <span class="toggle-title">Aktifkan MarkerCluster (L.divIcon)</span>
+                <span class="toggle-desc">Kelompokkan titik berdekatan dengan L.marker + L.divIcon</span>
+              </div>
+            </label>
+
+            <label class="toggle-row" for="toggle-labels">
+              <input type="checkbox" id="toggle-labels" checked />
+              <div>
+                <span class="toggle-title">Tampilkan Label Bintang &ge; 3 (Halo)</span>
+                <span class="toggle-desc">Tampilkan nama &amp; kelas untuk hotel berbintang &ge; 3</span>
+              </div>
+            </label>
+
+            <label class="toggle-row" for="toggle-kawasan">
+              <input type="checkbox" id="toggle-kawasan" checked />
+              <div>
+                <span class="toggle-title">Tampilkan Poligon Kawasan Hotel</span>
+                <span class="toggle-desc">Layer poligon kawasan hasil digitasi SK-2 &amp; web</span>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <!-- 3. Statistik Bintang -->
+        <section class="panel-card">
+          <div class="panel-header">
+            <h2>Statistik Kelas Hotel</h2>
+            <span id="stats-total" class="muted-tag">Total: -</span>
+          </div>
+          <div id="stats-container" class="stats-list">
+            <p class="muted-text">Memuat statistik dari /api/stats/bintang...</p>
+          </div>
+        </section>
+
+        <!-- 4. Digitasi Kawasan Hotel Baru -->
+        <section class="panel-card">
+          <div class="panel-header">
+            <h2>Tambah Kawasan Hotel</h2>
+          </div>
+          <p class="panel-desc">
+            Klik pada peta untuk menandai minimal 3 titik sudut poligon kawasan hotel baru.
+          </p>
+
+          <div class="form-group">
+            <label for="input-nama-kawasan" class="input-label">Nama Kawasan</label>
+            <input
+              type="text"
+              id="input-nama-kawasan"
+              class="text-input"
+              placeholder="Contoh: Kawasan Ahmad Yani"
+              maxlength="80"
+            />
+          </div>
+
+          <div class="draw-meta">
+            <span id="draw-point-count" class="muted-tag">Titik dipilih: 0</span>
+            <span id="draw-status" class="draw-status">Siap menggambar</span>
+          </div>
+
+          <div class="button-group">
+            <button type="button" id="btn-draw-kawasan" class="btn btn-primary">
+              Mulai Gambar Poligon
+            </button>
+            <div class="button-row-2">
+              <button type="button" id="btn-save-kawasan" class="btn btn-success" disabled>
+                Simpan ke Server
+              </button>
+              <button type="button" id="btn-cancel-kawasan" class="btn btn-secondary" disabled>
+                Batal
+              </button>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Area Peta Utama -->
+      <section class="map-section" aria-label="Peta Interaktif Leaflet">
+        <div id="map"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Leaflet 1.9.4 JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+
+  <!-- Leaflet.markercluster 1.5.3 JS -->
+  <script
+    src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
+    crossorigin=""
+  ></script>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
